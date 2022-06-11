@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ray
+  name: ikli
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ray
+      app: ikli
   template:
     metadata:
       labels:
-        app: ray
+        app: ikli
     spec:
       containers:
-      - image: okteto.dev/ray:latest
-        name: ray
+      - image: okteto.dev/ikli:latest
+        name: ikli
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: ""
+          value: "lenskart.com"
         - name: Vless_UUID
-          value: "273d7707-9bb1-44ff-b24c-b59876344cac"
+          value: "5a441365-9d24-497e-80c0-39ab9fcefb3a"
         - name: Vless_Path
-          value: "/s233"
+          value: "/reryu6"
         - name: Vmess_UUID
-          value: "273d7707-9bb1-44ff-b24c-b59876344cac"
+          value: "5a441365-9d24-497e-80c0-39ab9fcefb3a"
         - name: Vmess_Path
-          value: "/s244"
+          value: "/nmj896"
         - name: Share_Path
           value: "/share233"
